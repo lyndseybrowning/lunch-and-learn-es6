@@ -15,18 +15,22 @@ const sum = sumAll(...array1);
 
 console.log(sum);
 
-// we can also use it to shallow-copy objects...
-// however, this is still not fully standardised (stage 3)
-// and can be enabled using a babel-polyfill or by using Node V8
 const obj = {
     name: 'John',
     age: 34
 };
 
-// this is syntactic sugar for Object.assign({}); 
-// in ES5
-const john = { ...obj };
+// we can also use spread to shallow-copy objects...
+// however, this is not (yet) standardised
+// and can be enabled using a babel-polyfill or by using Node V8
+//const john = { ...obj };
 
-console.log(john);
+// objects can also be copied using ES6's Object.assign method
+const obj2 = Object.assign({}, obj);
+
+obj2.age = 35;
+
+console.log(obj);
+console.log(obj2);
 
 
