@@ -1,7 +1,7 @@
 const array = [1, 2, 3];
 
-const doubledArrayValues = array.map(function(number) {
+const doubleArrayValues = array.map(function(number) {
     return number + number;
 });
 
-console.log(doubledArrayValues);
+console.log(doubleArrayValues);
