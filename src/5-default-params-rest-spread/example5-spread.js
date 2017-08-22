@@ -15,6 +15,10 @@ const sum = sumAll(...array1);
 
 console.log(sum);
 
+// normally we would use something like .apply
+// to pass an array of arguments to a function... 
+sumAll.apply(null, array1); 
+
 const obj = {
     name: 'John',
     age: 34
